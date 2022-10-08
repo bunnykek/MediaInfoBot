@@ -61,20 +61,17 @@ def tgInfo(client: Client, msg: Message):
             for i in range(len(lines)):
                 if 'File size' in lines[i]:
                     lines[i] = re.sub(r": .+", ': '+readable_size, lines[i])
-                    continue
                 elif 'Overall bit rate' in lines[i] and 'Overall bit rate mode' not in lines[i]:
                     lines[i] = re.sub(r": .+", ': '+bitrate, lines[i])
-                    continue
                 elif 'IsTruncated' in lines[i] or 'FileExtension_Invalid' in lines[i]:
                     lines[i] = ''
-                    continue
 
             remove_N(lines)
 
         with open(f'{fileName}.txt', 'w') as f:
             f.write('\n'.join(lines))
 
-        msg.send_document(document=f'{fileName}.txt', caption=f'`{fileName}`')
+        msg.reply_document(document=f'{fileName}.txt', caption=f'`{fileName}`')
 
         print("TG file Mediainfo sent", flush=True)
         os.remove(f'{fileName}.txt')
