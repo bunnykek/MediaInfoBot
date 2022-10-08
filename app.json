@@ -1,0 +1,51 @@
+{
+    "name": "MediaInfoBot",
+    "description": "Multiutility telegram bot by bunny",
+    "repository": "https://github.com/bunnykek/MediaInfoBot",
+    "logo": "https://imgur.com/UsUog2Z.png",
+    "keywords": [
+        "telegram",
+        "telegram-bot",
+        "mediainfo",
+        "spectrogram-bot"
+    ],
+    "env": {
+        "api_id": {
+            "description": "Get your api_id from https://my.telegram.org/apps",
+            "value": "12345"
+        },
+        "api_hash": {
+            "description": "Get your api_hash from https://my.telegram.org/apps",
+            "value": "0123456789abcdef0123456789abcdef"
+        },
+        "bot_token": {
+            "description": "Get your bot's token from https://telegram.me/BotFather ",
+            "value": "XXXXXXXXXX:YYYYYYYYYYYYYYYYYYYYYYYYY"
+        },
+        "gdtot_php": {
+            "description": "Get it from GDTOT cookies",
+            "value": ""
+        },
+        "gdtot_crypt": {
+            "description": "Get it from GDTOT cookies",
+            "value": ""
+        },
+        "appdrive_php": {
+            "description": "Get it from AppDrive cookies",
+            "value": ""
+        },
+        "appdrive_md": {
+            "description": "Get it from AppDrive cookies",
+            "value": ""
+        },
+        "token_json": {
+            "description": "token.json contents",
+            "value": "{...}"
+        },
+        "owner": {
+            "description": "Bot owner telegram ID",
+            "value": ""
+        }
+    },
+    "stack": "container"
+}
